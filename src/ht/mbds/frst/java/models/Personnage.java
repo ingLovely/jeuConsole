@@ -1,16 +1,18 @@
+package ht.mbds.frst.java.models;
 
-package jeuconsole;
 
 /**
  *
- * @author Admin
+ * @author RL
  */
 public class Personnage {
     private String nom;
     private int vie;
+    private int id;
     private int attaque;
 
-    public Personnage(String nom, int vie, int attaque) {
+    public Personnage(int id,String nom, int vie, int attaque) {
+        this.id=id;
         this.nom = nom;
         this.vie = vie;
         this.attaque = attaque;
@@ -39,6 +41,21 @@ public class Personnage {
     public void setAttaque(int attaque) {
         this.attaque = attaque;
     }
+
+    public int getId() {
+        return id;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Personnage{" + "nom=" + nom + ", vie=" + vie + ", attaque=" + attaque + '}';
+    }
+    
+    public boolean estVivant(){
+        return this.vie>0;
+    }
     
     
 }
+

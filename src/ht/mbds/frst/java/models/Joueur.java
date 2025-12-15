@@ -1,9 +1,9 @@
+package ht.mbds.frst.java.models;
 
-package jeuconsole;
 
 /**
  *
- * @author Admin
+ * @author RL
  */
 public class Joueur {
     private String nomUtilisateur;
@@ -29,6 +29,12 @@ public class Joueur {
     public void setEquipe(Personnage[] equipe) {
         this.equipe = equipe;
     }
+
+    @Override
+    public String toString() {
+        return "Joueur{" + "nomUtilisateur=" + nomUtilisateur + ",\n equipe=" + equipe.toString() + '}';
+    }
     
     
 }
+
